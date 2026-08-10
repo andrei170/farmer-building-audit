@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Farmer Building Contractors - Demo Concept by AG1</title>
+<style>
+  :root{
+    --bg:#f7f4ef; --panel:#fffdf9; --ink:#2e2a24; --mut:#756d61; --line:#e5ddd1;
+    --brick:#9c4a2f; --brick2:#7e3a24; --stone:#c9b99a; --cream:#f3ede2; --green:#3e5641;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  .ribbon{background:var(--brick);color:#fff7f0;text-align:center;font-size:12.5px;font-weight:700;
+    padding:7px 12px;letter-spacing:.08em;text-transform:uppercase;font-family:Arial,sans-serif}
+
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--line)}
+  .logo{font-size:19px;font-weight:700;letter-spacing:.02em}
+  .logo span{color:var(--brick)}
+  .navcta{background:var(--brick);color:#fff7f0;text-decoration:none;font-weight:800;font-size:14px;
+    padding:11px 20px;border-radius:6px;font-family:Arial,sans-serif}
+
+  .hero{position:relative;padding:88px 0 78px;
+    background:
+      radial-gradient(700px 380px at 85% -10%, rgba(156,74,47,.12), transparent 60%),
+      repeating-linear-gradient(0deg, transparent 0 46px, rgba(156,74,47,.04) 46px 48px), var(--bg)}
+  .kick{color:var(--brick);font-size:13px;letter-spacing:.28em;text-transform:uppercase;font-family:Arial,sans-serif;font-weight:700}
+  h1{font-size:clamp(34px,5.5vw,58px);line-height:1.1;font-weight:700;margin:16px 0 18px;max-width:18ch}
+  .hero p{font-size:18px;color:#5c554b;max-width:54ch;margin-bottom:30px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-family:Arial,sans-serif;font-weight:800;font-size:15.5px;
+    padding:16px 28px;border-radius:6px}
+  .btn.brick{background:var(--brick);color:#fff7f0}
+  .btn.ghost{border:1.5px solid var(--brick);color:var(--brick)}
+  .hero .micro{margin-top:18px;font-size:13.5px;color:var(--mut);font-family:Arial,sans-serif}
+  .hero .micro b{color:var(--brick)}
+
+  .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
+  .trust .wrap{display:flex;justify-content:space-between;gap:18px;padding:20px 24px;flex-wrap:wrap}
+  .titem{font-family:Arial,sans-serif;font-size:13.5px;color:var(--mut)}
+  .titem b{color:var(--ink);display:block;font-size:16.5px;margin-bottom:2px}
+  .titem b span{color:var(--brick)}
+
+  section{padding:70px 0}
+  .eyebrow{color:var(--brick);font-size:12.5px;letter-spacing:.26em;text-transform:uppercase;font-family:Arial,sans-serif;font-weight:700}
+  h2{font-size:clamp(26px,3.4vw,38px);font-weight:700;margin:12px 0 14px}
+  .lede{color:var(--mut);font-size:16.5px;max-width:64ch}
+
+  .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+  @media(max-width:860px){.svc{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.svc{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--brick);
+    border-radius:10px;padding:22px;transition:transform .2s ease}
+  .card:hover{transform:translateY(-4px)}
+  .card h3{font-size:17px;font-weight:700;margin-bottom:6px}
+  .card p{font-size:13.5px;color:var(--mut);font-family:Arial,sans-serif}
+
+  .herit{background:linear-gradient(120deg,#2e2a24,#3a332b);color:#f3ede2}
+  .herit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding-top:64px;padding-bottom:64px}
+  @media(max-width:860px){.herit .wrap{grid-template-columns:1fr}}
+  .herit h2{color:#fff}
+  .herit .lede{color:#cfc7b8}
+  .herit .badge{display:inline-block;border:1px solid var(--stone);color:var(--stone);border-radius:999px;
+    padding:6px 16px;font-family:Arial,sans-serif;font-size:13px;font-weight:700;margin-top:16px}
+  ul.steps{list-style:none}
+  ul.steps li{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid #ffffff1c;font-family:Arial,sans-serif}
+  ul.steps li:last-child{border-bottom:none}
+  .n{flex:0 0 40px;height:40px;border-radius:99px;background:var(--stone);color:#2e2a24;display:flex;
+    align-items:center;justify-content:center;font-weight:900;font-size:17px}
+  ul.steps b{display:block;font-size:15.5px;margin-bottom:3px;color:#fff}
+  ul.steps p{font-size:13.5px;color:#cfc7b8}
+
+  .quote{background:var(--panel);border-top:1px solid var(--line)}
+  .quote .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;padding-top:64px;padding-bottom:64px}
+  @media(max-width:860px){.quote .wrap{grid-template-columns:1fr}}
+  .qform{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:26px}
+  .qform label{display:block;font-family:Arial,sans-serif;font-size:12.5px;color:var(--mut);
+    text-transform:uppercase;letter-spacing:.1em;margin:14px 0 6px}
+  .qform select,.qform input{width:100%;background:#fff;border:1px solid var(--line);border-radius:6px;
+    color:var(--ink);padding:13px 14px;font-size:15px;font-family:Arial,sans-serif}
+  .qform .btn{width:100%;text-align:center;margin-top:20px;border:none;cursor:pointer;font-size:16px}
+  .qform .note{font-family:Arial,sans-serif;font-size:12.5px;color:var(--green);margin-top:12px;text-align:center;font-weight:700}
+
+  footer{padding:30px 0 90px;border-top:1px solid var(--line);color:var(--mut);font-family:Arial,sans-serif;font-size:13px}
+  footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fffdf9;border-top:2px solid var(--brick);
+    display:flex;gap:10px;justify-content:center;padding:10px 14px;box-shadow:0 -6px 24px rgba(46,42,36,.12)}
+  .callbar a{flex:1;max-width:260px;text-align:center;text-decoration:none;font-family:Arial,sans-serif;
+    font-weight:800;font-size:14.5px;padding:13px 10px;border-radius:6px}
+  .callbar .c1{background:var(--brick);color:#fff7f0}
+  .callbar .c2{border:1.5px solid var(--brick);color:var(--brick)}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Design concept prepared for Farmer Building Contractors by AG1 Consulting - not the live site</div>
+
+<div class="wrap">
+  <nav>
+    <div class="logo">Farmer <span>Building</span> Contractors</div>
+    <a class="navcta" href="#quote">Request a Quote</a>
+  </nav>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kick">Builders · Market Drayton, Shropshire · A Family Firm</div>
+    <h1>Built by the same family for over 45 years.</h1>
+    <p>New builds, extensions, renovations and listed-building restoration across Market Drayton and the surrounding villages - father-and-son craftsmanship, now in its second generation.</p>
+    <div class="cta-row">
+      <a class="btn brick" href="#quote">Request a Quote</a>
+      <a class="btn ghost" href="tel:+447772621381">Call 07772 621381</a>
+    </div>
+    <div class="micro"><b>Every enquiry answered fast</b> - and you'll always know exactly who you're dealing with.</div>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="titem"><b><span>45+</span> years</b>Family trade experience</div>
+    <div class="titem"><b>Grade I &amp; II</b>Listed building restoration</div>
+    <div class="titem"><b>Est. 2011</b>As a limited company</div>
+    <div class="titem"><b>10-mile promise</b>Local, accountable, nearby</div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">What we build</div>
+    <h2>From new foundations to listed restorations.</h2>
+    <p class="lede">One family firm across the whole job - no chains of subcontractors you've never met.</p>
+    <div class="svc">
+      <div class="card"><h3>New Builds</h3><p>Complete builds from groundworks to handover.</p></div>
+      <div class="card"><h3>Extensions</h3><p>Single and double storey, designed around how you live.</p></div>
+      <div class="card"><h3>Renovations</h3><p>Whole-house updates done properly, in order, on programme.</p></div>
+      <div class="card"><h3>Listed Buildings</h3><p>Grade I &amp; II restoration - heritage skills few firms carry.</p></div>
+      <div class="card"><h3>Roofing &amp; Groundworks</h3><p>The structural ends of the job, handled in-house.</p></div>
+      <div class="card"><h3>Patios &amp; Landscaping</h3><p>The finishing touches that complete the property.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="herit">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="color:var(--stone)">The difference</div>
+      <h2>Trusted with buildings older than most firms.</h2>
+      <p class="lede">Grade I and Grade II listed restoration is the deep end of building - lime mortars, conservation standards, work that has to satisfy both the owner and the conservation officer. It's the clearest proof of craftsmanship there is: if we're trusted with 300-year-old walls, your extension is in safe hands.</p>
+      <span class="badge">Heritage restoration · Conservation-standard work</span>
+    </div>
+    <ul class="steps">
+      <li><span class="n">1</span><span><b>Walk the job with us</b><p>We visit, listen, and talk through what's possible - straight answers, no sales patter.</p></span></li>
+      <li><span class="n">2</span><span><b>A clear written quote</b><p>Itemised and explained, so you know what you're paying for.</p></span></li>
+      <li><span class="n">3</span><span><b>Built and stood behind</b><p>The same family name has been on this work for 45 years. It stays good.</p></span></li>
+    </ul>
+  </div>
+</div>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Start here</div>
+      <h2>Tell us about the job.</h2>
+      <p class="lede">Serving Market Drayton and everywhere within ten miles - Cheswardine, Hinstock, Hodnet, Woore, Loggerheads and the villages between.</p>
+      <p class="lede" style="margin-top:14px"><b style="color:var(--brick)">Demo note:</b> on the live build this form fires an instant reply, books the site visit into the calendar, and every enquiry is tracked to its source.</p>
+    </div>
+    <form class="qform" onsubmit="return false">
+      <label>Project type</label>
+      <select><option>Extension</option><option>Renovation</option><option>New build</option><option>Listed building work</option><option>Roofing / groundworks</option><option>Smaller works</option></select>
+      <label>Village / postcode</label>
+      <input type="text" placeholder="e.g. TF9">
+      <label>Name</label>
+      <input type="text" placeholder="Your name">
+      <label>Mobile</label>
+      <input type="tel" placeholder="07000 000000">
+      <button class="btn brick" type="submit">Request My Quote</button>
+      <div class="note">Fast response · Family-run · 45+ years of local work</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Farmer Building Contractors Ltd · Cheswardine, Market Drayton, Shropshire</div>
+    <div>Design concept by AG1 Consulting · Not the live website</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c1" href="tel:+447772621381">📞 Call Now</a>
+  <a class="c2" href="#quote">Request a Quote</a>
+</div>
+
+</body>
+</html>
